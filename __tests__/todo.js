@@ -83,7 +83,7 @@ describe("Todo test cases ", () => {
       .get("/todos")
       .set("Accept", "application/json");
     const parsedGroupedResponse = JSON.parse(gropuedTodosResponse.text);
-    const dueTodayCount = parsedGroupedResponse.dueToday.length;
+    const dueTodayCount = parsedGroupedResponse.dueToday'length';
     const latestTodo = parsedGroupedResponse.dueToday[dueTodayCount - 1];
     const status = latestTodo.completed ? false : true;
     res = await agent.get("/todos");
@@ -113,7 +113,7 @@ describe("Todo test cases ", () => {
       .get("/todos")
       .set("Accept", "application/json");
     const parsedGroupedResponse = JSON.parse(gropuedTodosResponse.text);
-    const dueTodayCount = parsedGroupedResponse.dueToday.length;
+    const dueTodayCount = parsedGroupedResponse.dueToday'length';
     const latestTodo = parsedGroupedResponse.dueToday[dueTodayCount - 1];
 
     res = await agent.get("/todos");
